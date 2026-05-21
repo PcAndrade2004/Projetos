@@ -12,6 +12,14 @@ public class Motos extends Veiculo {
         this.cilindrada = cilindrada;
     }
 
+    @Override
+    public double calcularDesconto() {
+        if (getQuantidadeDisponivel() > 20) {
+            return getValorDiaria() * 0.90;
+        }
+        return getValorDiaria();
+    }
+
     public String getCilindrada() {
         return cilindrada;
     }

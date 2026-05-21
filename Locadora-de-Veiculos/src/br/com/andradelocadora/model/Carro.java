@@ -14,6 +14,7 @@ package br.com.andradelocadora.model;
             this.tipoCombustivel = tipoCombustivel;
         }
 
+        // Calculando desconto automatico.
         @Override
         public double calcularDesconto() {
             if (getQuantidadeDisponivel() > 10) {
@@ -22,6 +23,7 @@ package br.com.andradelocadora.model;
             return getValorDiaria();
         }
 
+        // Calculando desconto se gerente inserir o desconto.
         @Override
         public double calcularDesconto(double porcentagem) {
             if (porcentagem == 10) {
