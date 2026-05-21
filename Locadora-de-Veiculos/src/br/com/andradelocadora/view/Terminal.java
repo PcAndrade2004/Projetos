@@ -27,5 +27,6 @@ public class Terminal {
                 "Gasolina"
         );
         System.out.println(moto);
+
     }
 }

@@ -12,12 +12,22 @@ public class Veiculo {
 
     }
 
-    public Veiculo(String nome, String marca, int ano, double valorDiaria, int quantidadeDisponivel ) {
+    public Veiculo(String nome, String marca, int ano,
+                   double valorDiaria, int quantidadeDisponivel) {
+
         this.nome = nome;
         this.marca = marca;
         this.ano = ano;
         this.valorDiaria = valorDiaria;
         this.quantidadeDisponivel = quantidadeDisponivel;
+    }
+
+    public double calcularDesconto() {
+        return valorDiaria;
+    }
+
+    public double calcularDesconto(double porcentagem) {
+        return valorDiaria - (valorDiaria * (porcentagem / 100));
     }
 
     public String getNome() {

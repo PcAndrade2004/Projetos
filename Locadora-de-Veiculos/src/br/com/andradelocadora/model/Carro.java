@@ -14,6 +14,26 @@ package br.com.andradelocadora.model;
             this.tipoCombustivel = tipoCombustivel;
         }
 
+        @Override
+        public double calcularDesconto() {
+            if (getQuantidadeDisponivel() > 10) {
+                return getValorDiaria() * 0.90;
+            }
+            return getValorDiaria();
+        }
+
+        @Override
+        public double calcularDesconto(double porcentagem) {
+            if (porcentagem == 10) {
+                return getValorDiaria() * 0.90;
+            }else if (porcentagem == 20) {
+                return getValorDiaria() * 0.80;
+            }else if (porcentagem == 30) {
+                return getValorDiaria() * 0.70;
+            }
+            return getValorDiaria();
+        }
+
         public int getQuantidadePortas() {
             return quantidadePortas;
         }
