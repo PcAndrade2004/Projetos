@@ -1,12 +1,12 @@
 package br.com.andradelocadora.view;
 
-import br.com.andradelocadora.model.Carros;
+import br.com.andradelocadora.model.Carro;
 import br.com.andradelocadora.model.Motos;
 
 public class Terminal {
     public static void main(String[] args) {
         System.out.println("==== DADOS CARROS ====");
-        Carros carros = new Carros(
+        Carro carros = new Carro(
                 "Fusca",
                 "Golf",
                 2021,
