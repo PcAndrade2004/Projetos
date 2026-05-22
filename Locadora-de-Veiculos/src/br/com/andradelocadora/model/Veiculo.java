@@ -30,6 +30,10 @@ public class Veiculo {
         return valorDiaria - (valorDiaria * (porcentagem / 100));
     }
 
+    public double calcularDesconto(String cupom){
+        return valorDiaria - calcularDesconto(cupom);
+    }
+
     public String getNome() {
         return nome;
     }

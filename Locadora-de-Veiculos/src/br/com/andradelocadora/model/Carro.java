@@ -36,6 +36,16 @@ package br.com.andradelocadora.model;
             return getValorDiaria();
         }
 
+        @Override
+        public double calcularDesconto(String cupom) {
+            if(cupom.equals("BEMVINDO")) {
+                return getValorDiaria() * 0.90;
+            }else if (cupom.equals("VIPCAR")) {
+                return getValorDiaria() * 0.75;
+            }
+            return getValorDiaria();
+        }
+
         public int getQuantidadePortas() {
             return quantidadePortas;
         }
