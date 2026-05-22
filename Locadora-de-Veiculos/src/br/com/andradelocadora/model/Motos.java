@@ -29,6 +29,16 @@ public class Motos extends Veiculo {
         return  valorProduto - valorComDesconto;
     }
 
+    @Override
+    public double calcularDesconto(String cupom) {
+        if(cupom.equals("BEMVINDO")) {
+            return getValorDiaria() * 0.85;
+        }else if (cupom.equals("MOTOFAST")) {
+            return getValorDiaria() * 0.80;
+        }
+        return getValorDiaria();
+    }
+
     public String getCilindrada() {
         return cilindrada;
     }
