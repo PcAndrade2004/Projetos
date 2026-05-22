@@ -13,6 +13,23 @@ public class Caminhao extends Veiculo{
         this.capacidadeCarga = capacidadeCarga;
     }
 
+    // Calculando desconto automatico.
+    @Override
+    public double calcularDesconto() {
+        if (getQuantidadeDisponivel() > 20) {
+            return getValorDiaria() * 0.90;
+        }
+        return getValorDiaria();
+    }
+
+    // Calculando desconto se gerente inserir o desconto.
+    @Override
+    public double calcularDesconto(double porcentagem) {
+        double valorProduto = getValorDiaria();
+        double valorComDesconto = valorProduto * (porcentagem / 100.0);
+        return  valorProduto - valorComDesconto;
+    }
+
     public int getCapacidadeCarga() {
         return capacidadeCarga;
     }
@@ -26,4 +43,6 @@ public class Caminhao extends Veiculo{
         return super.toString() +
                 "\nCapacidade de Carga: " + capacidadeCarga;
     }
+
+
 }
